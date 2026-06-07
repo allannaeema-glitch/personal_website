@@ -2,6 +2,8 @@ const links = document.querySelectorAll(".itemLinks");
 
 const descriptions = document.querySelectorAll("#descriptionContainer .description");
 
+
+
 links.forEach(link => {
   link.addEventListener("click", function (e) {
 
@@ -18,6 +20,7 @@ links.forEach(link => {
     clickedLink.classList.add("active");
 
     descriptions.forEach(desc => desc.style.display = "none");
+    
     const activeDesc = document.querySelector(`#descriptionContainer .description[data-pos="${position}"]`);
     
     if (activeDesc) {
@@ -26,6 +29,8 @@ links.forEach(link => {
 
   });
 });
+
+
 
 if (links.length > 0) {
   links[0].classList.add("active");
